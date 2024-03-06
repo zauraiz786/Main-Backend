@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
+import 'dotenv/config';
 
-mongoose.connect('mongodb+srv://zauraizhassankhan99:zauraizhassankhan99@cluster0.pfbfgov.mongodb.net/')
+mongoose.connect(process.env.MONGO_URI)
 
 export default mongoose

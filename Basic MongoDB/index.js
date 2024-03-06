@@ -4,7 +4,7 @@ import 'dotenv/config'
 import router from './routes/index.js'
 
 const app = express()
-const port = 3000
+const port = process.env.PORT
 
 //!Middle Ware
 app.use(express.json())
