@@ -1,10 +1,12 @@
 import express from 'express'
+import cors from 'cors'
 import db from './config/db.js'
-import 'dotenv/config'
 import router from './routes/index.js'
+import { PORT } from './config/environmentVariables.js'
 
 const app = express()
-const port = process.env.PORT
+app.use(cors())
+const port = PORT
 
 //!Middle Ware
 app.use(express.json())
